@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Advanced Unit Converter</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Main Title -->
+  <h1>Unit Converter</h1>
+
+  <!-- Navigation Bar -->
+  <div class="nav-bar">
+    <button onclick="showConverter('km-to-mi')">Km to Mi</button>
+    <button onclick="showConverter('kg-to-lbs')">Kg to Lbs</button>
+    <button onclick="showConverter('celsius-to-fahrenheit')">Celsius to Fahrenheit</button>
+    <button onclick="showConverter('liter-to-gallon')">Liter to Gallon</button>
+    <button onclick="showConverter('meter-to-feet')">Meter to Feet</button>
+    <button onclick="showConverter('time-conversion')">Time Conversion</button>
+    <button onclick="showConverter('pressure-conversion')">Pressure Conversion</button>
+    <button onclick="showConverter('energy-conversion')">Energy Conversion</button>
+    <button onclick="showConverter('digital-storage')">GB to MB</button>
+  </div>
+
+  <div class="container">
+
+    <!-- Kilometer to Mile & Mile to Kilometer -->
+    <div class="converter" id="km-to-mi">
+      <h2>Km to Mi & Mi to Km</h2>
+      <label for="km">Kilometers:</label>
+      <input type="number" id="km" placeholder="Enter Km" oninput="convertKmToMi()">
+      <label for="mile">Miles:</label>
+      <input type="number" id="mile" placeholder="Enter Mi" oninput="convertMiToKm()">
+    </div>
+
+    <!-- Kilogram to Pound & Pound to Kilogram -->
+    <div class="converter" id="kg-to-lbs">
+      <h2>Kg to Lbs & Lbs to Kg</h2>
+      <label for="kg">Kilograms:</label>
+      <input type="number" id="kg" placeholder="Enter Kg" oninput="convertKgToLbs()">
+      <label for="lbs">Pounds:</label>
+      <input type="number" id="lbs" placeholder="Enter Lbs" oninput="convertLbsToKg()">
+    </div>
+
+    <!-- Celsius to Fahrenheit & Fahrenheit to Celsius -->
+    <div class="converter" id="celsius-to-fahrenheit">
+      <h2>Celsius to Fahrenheit & Fahrenheit to Celsius</h2>
+      <label for="celsius">Celsius:</label>
+      <input type="number" id="celsius" placeholder="Enter Celsius" oninput="convertCelsiusToFahrenheit()">
+      <label for="fahrenheit">Fahrenheit:</label>
+      <input type="number" id="fahrenheit" placeholder="Enter Fahrenheit" oninput="convertFahrenheitToCelsius()">
+    </div>
+
+    <!-- Liter to Gallon & Gallon to Liter -->
+    <div class="converter" id="liter-to-gallon">
+      <h2>Liter to Gallon & Gallon to Liter</h2>
+      <label for="liter">Liters:</label>
+      <input type="number" id="liter" placeholder="Enter Liters" oninput="convertLiterToGallon()">
+      <label for="gallon">Gallons:</label>
+      <input type="number" id="gallon" placeholder="Enter Gallons" oninput="convertGallonToLiter()">
+    </div>
+
+    <!-- Meter to Feet & Feet to Meter -->
+    <div class="converter" id="meter-to-feet">
+      <h2>Meter to Feet & Feet to Meter</h2>
+      <label for="meter">Meters:</label>
+      <input type="number" id="meter" placeholder="Enter Meters" oninput="convertMeterToFeet()">
+      <label for="feet">Feet:</label>
+      <input type="number" id="feet" placeholder="Enter Feet" oninput="convertFeetToMeter()">
+    </div>
+
+    <!-- Time Conversion -->
+    <div class="converter" id="time-conversion">
+      <h2>Time: Hours to Minutes & Minutes to Hours</h2>
+      <label for="hours">Hours:</label>
+      <input type="number" id="hours" placeholder="Enter Hours" oninput="convertHoursToMinutes()">
+      <label for="minutes">Minutes:</label>
+      <input type="number" id="minutes" placeholder="Enter Minutes" oninput="convertMinutesToHours()">
+    </div>
+
+    <!-- Pressure Conversion -->
+    <div class="converter" id="pressure-conversion">
+      <h2>Pressure: Pascal to PSI & PSI to Pascal</h2>
+      <label for="pascal">Pascal:</label>
+      <input type="number" id="pascal" placeholder="Enter Pascal" oninput="convertPascalToPsi()">
+      <label for="psi">PSI:</label>
+      <input type="number" id="psi" placeholder="Enter PSI" oninput="convertPsiToPascal()">
+    </div>
+
+    <!-- Energy Conversion -->
+    <div class="converter" id="energy-conversion">
+      <h2>Energy: Joules to Calories & Calories to Joules</h2>
+      <label for="joules">Joules:</label>
+      <input type="number" id="joules" placeholder="Enter Joules" oninput="convertJoulesToCalories()">
+      <label for="calories">Calories:</label>
+      <input type="number" id="calories" placeholder="Enter Calories" oninput="convertCaloriesToJoules()">
+    </div>
+
+       <!-- Digital Storage: GB to MB and MB to GB -->
+    <div class="converter" id="digital-storage">
+      <h2>Digital Storage: GB to MB & MB to GB</h2>
+      <label for="gb">Gigabytes (GB):</label>
+      <input type="number" id="gb" placeholder="Enter GB" oninput="convertGBtoMB()">
+      <label for="mb">Megabytes (MB):</label>
+      <input type="number" id="mb" placeholder="Enter MB" oninput="convertMBtoGB()">
+      <div class="result" id="digital-result"></div>
+    </div>
+
+  </div>
+
+<script src="script.js"></script>
+</body>
+</html>
